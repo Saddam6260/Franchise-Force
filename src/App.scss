@@ -1,0 +1,45 @@
+$darkblue: #053655;
+$orange: #ff6900;
+$gray: #a6a6a6;
+
+// Screen Size
+$xm : 320px;
+$xxm : 480px;
+$sm : 576px;
+$md : 768px;
+$lg : 992px;
+$xl : 1200px;
+$xxl : 1620px;
+
+@mixin media($screen){
+    @media only screen and (min-width: $screen) {
+        @content;
+    }
+}
+
+.container{
+    margin: auto;
+    @include media($xm) {
+        max-width: 280px;
+        background-color: green;
+    }
+    @include media($xxm) {
+        max-width: 420px;
+    }
+    @include media($sm) {
+        max-width: 500px;
+    }
+    @include media($md) {
+        max-width: 640px;
+    }
+    @include media($lg) {
+        max-width: 800px;
+    }
+    @include media($xl) {
+        max-width: 960px;
+    }
+    @include media($xxl) {
+        max-width: 1200px;
+        background-color: #ff6900;
+    }
+}

@@ -1,0 +1,25 @@
+@import "../App";
+
+.header {
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        h3 {
+          margin: 0px;
+          display: flex;
+          flex-flow: column;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
