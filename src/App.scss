@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 $darkblue: #053655;
 $orange: #ff6900;
 $gray: #a6a6a6;
@@ -21,7 +27,6 @@ $xxl : 1620px;
     margin: auto;
     @include media($xm) {
         max-width: 280px;
-        background-color: green;
     }
     @include media($xxm) {
         max-width: 420px;
@@ -39,7 +44,12 @@ $xxl : 1620px;
         max-width: 960px;
     }
     @include media($xxl) {
-        max-width: 1200px;
-        background-color: #ff6900;
+        max-width: 1200px;  
     }
+}
+
+.main_heading{
+    color: white;
+    font-size: 54px;
+    font-weight: 600;
 }

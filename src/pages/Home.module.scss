@@ -1,9 +1,25 @@
-.section{
-    
-}
-
 .container{
     background-color: yellow;
+}
+
+main{
+    background-image: url(../Images/Background-image/Home_main_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .main_heading{
+        display: flex;
+        flex-flow: column wrap;
+        border-bottom: 2px solid white;
+        padding-bottom: 15px;
+        max-width: 520px;
+        margin-top: 136px;
+        margin-bottom: 39px
+    }
+    .btn_wrap{
+        padding-bottom: 100px;
+    }
 }
 
 @import "../App.scss";
