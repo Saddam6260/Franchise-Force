@@ -4,7 +4,7 @@ import Menuber from '../component/Menuber'
 const Media = () => {
   return (
     <div>Media
-        <Menuber/>
+        {/* <Menuber/> */}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.scss";
 
+import Menuber from "./component/Menuber";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -15,8 +16,8 @@ function App() {
 
   return (
     <div>
-      <main>
-        <Switch>
+      <Menuber />
+      <Switch>
           <Route path="/" exact>
             <Home />
           </Route>
@@ -27,19 +28,18 @@ function App() {
             <About />
           </Route>
           <Route path="/services">
-            <Services/>
+            <Services />
           </Route>
           <Route path="/media">
-            <Media/>
+            <Media />
           </Route>
           <Route path="/contactus">
-            <ContactUs/>
+            <ContactUs />
           </Route>
           <Route path="/letstalk">
-            <LetsTalk/>
+            <LetsTalk />
           </Route>
         </Switch>
-      </main>
     </div>
   );
 }

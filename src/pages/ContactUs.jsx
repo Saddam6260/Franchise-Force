@@ -4,7 +4,7 @@ import Menuber from '../component/Menuber'
 const ContactUs = () => {
   return (
     <div>ContactUs
-        <Menuber/>
+        {/* <Menuber/> */}
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Menuber from '../component/Menuber'
 const Services = () => {
   return (
     <div>Services
-      <Menuber/>
+      {/* <Menuber/> */}
     </div>
   )
 }

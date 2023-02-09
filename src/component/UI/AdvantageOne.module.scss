@@ -1,0 +1,162 @@
+@import "../../App";
+
+// adventage
+.adventage {
+  position: relative;
+
+  .contentwrap {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include media($sm) {
+      margin-top: 60px;
+    }
+    @include media($lg) {
+      margin-top: 130px;
+      flex-flow: row wrap;
+    }
+    @include media($xl) {
+      margin-top: 150px;
+    }
+    @include media($xxl) {
+      margin-top: 170px;
+      padding: 0px 20px;
+    }
+
+    .advantageleft {
+      @include media($lg) {
+        max-width: 330px;
+      }
+      @include media($xl) {
+        max-width: 400px;
+      }
+      @include media($xxl) {
+        max-width: 510px;
+      }
+      h1 {
+        color: black;
+        margin-bottom: 20px;
+
+        @include media($sm) {
+          margin-bottom: 30px;
+        }
+        @include media($lg) {
+          display: flex;
+          flex-flow: column wrap;
+          margin-bottom: 35px;
+        }
+        @include media($xl) {
+          margin-bottom: 40px;
+        }
+        @include media($xxl) {
+          margin-bottom: 43px;
+        }
+      }
+
+      ul {
+        margin-top: 30px;
+        li {
+          display: flex;
+          column-gap: 13px;
+          margin-bottom: 15px;
+          font-size: 14px;
+
+          @include media($sm) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .advantageright {
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+
+      @include media($md) {
+        column-gap: 30px;
+        row-gap: 30px;
+        justify-content: start;
+      }
+      @include media($lg) {
+        column-gap: 10px;
+        row-gap: 10px;
+        max-width: 450px;
+        margin-top: 0px;
+      }
+      @include media($xl) {
+        column-gap: 30px;
+        row-gap: 30px;
+        max-width: 500px;
+      }
+      @include media($xxl) {
+        max-width: 560px;
+        column-gap: 43px;
+        row-gap: 43px;
+      }
+
+      .card_wrap:nth-child(1) {
+        @include media($lg) {
+          margin-top: -35px;
+        }
+      }
+      .card_wrap:nth-child(3) {
+        @include media($lg) {
+          margin-top: -35px;
+        }
+      }
+      .card_wrap:nth-child(4) {
+        background-color: $orange;
+
+        p{
+          color: white;
+        }
+      }
+
+      .card_wrap {
+        width: 270px;
+        height: 307px;
+        padding: 28px 32px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        @include media($sm) {
+          width: 240px;
+          height: 290px;
+        }
+        @include media($md) {
+          width: 255px;
+          height: 307px;
+        }
+        @include media($lg) {
+          width: 47%;
+          height: 300px;
+        }
+        @include media($xxl) {
+          height: 307px;
+          width: 46%;
+        }
+        div {
+          width: 57px;
+          margin-bottom: 18px;
+
+          img {
+            width: 100%;
+          }
+        }
+        P {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 30px;
+        }
+        .rightArrow {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

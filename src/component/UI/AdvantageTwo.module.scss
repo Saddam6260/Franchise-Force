@@ -1,0 +1,36 @@
+@import "../../App";
+
+.advantageTwo{
+    background-color: $orange;
+    margin-top: 100px;
+    padding: 64px 0px 46px 0px;
+    text-align: center;
+
+    h1{
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 15px;
+        color: white;
+    }
+}
+
+.cardwrap{
+    .card{
+        padding: 10px 30px;
+        text-align: center;
+    }
+}
+
+// Our Roadmap
+
+.our_roadmap{
+    padding: 50px 0px 45px 0px;
+
+    @include media($lg) {
+        padding: 73px 0px 63px 0px;
+    }
+    h1{
+        color: black;
+    }
+}
