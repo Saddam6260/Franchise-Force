@@ -1,39 +1,55 @@
 import React from "react";
 
 import classes from "./AdvantageTwo.module.scss";
+import Btn from "./Btn";
+
+import Personalsituationlogo from "../../Images/Logo/personal_situationlogo.png";
+import Matchinglogo from "../../Images/Logo/matchinglogo.png";
+import Prioritizationlogo from "../../Images/Logo/prioritizationlogo.png";
+import Preparation from "../../Images/Logo/preparation.png";
+import Betterdeallogo from "../../Images/Logo/betterdeallogo.png";
+import Partners from "../../Images/Logo/partners.png";
+import Transitionlogo from "../../Images/Logo/transitionlogo.png";
 
 const cardList = [
   {
+    img: Personalsituationlogo,
     head: "Personal Situation",
     description:
       "We take the time to understand your skills, interests, and deep underlying motivations.",
   },
   {
+    img: Matchinglogo,
     head: "Matching",
     description:
       "We match you to the right brands. This is part art/part science and based on understanding people and brands. Our bias is too simple models with strong business systems and support.",
   },
   {
+    img: Prioritizationlogo,
     head: "Prioritization",
     description:
       "Next, based on the quality of our franchisor relationships you are prioritized by franchisors and go right to the top of their lists.",
   },
   {
+    img: Preparation,
     head: "Preparation",
     description:
       "Once introduced, we provide clear and understandable insights and tools that help you optimize each part of the due diligence What we want is for franchisors to covet you.",
   },
   {
+    img: Betterdeallogo,
     head: "Get a better deal",
     description:
       "This allows us to help you negotiate a better deal from the franchisor.",
   },
   {
+    img: Partners,
     head: "Elite Partners",
     description:
       "We partner you with the top financing and legal resources in franchising.",
   },
   {
+    img: Transitionlogo,
     head: "Transition Plan",
     description:
       "Finding the right business is not enough. Our team helps you conceive of the best way of entering a franchise. We help you create a transition plan that generates the best results with the least amount of stress.",
@@ -60,6 +76,16 @@ const ourRoadmapList = [
   },
 ];
 
+// Perfact Franchise
+
+const perfactFranchiselist = [
+  "decide whether franchising is right for you",
+  "determine which franchise will optimize your chances of success",
+  "conduct due diligence",
+  "fund your franchise investment",
+  "live the life you dream about",
+];
+
 const AdvantageTwo = () => {
   return (
     <>
@@ -81,6 +107,7 @@ const AdvantageTwo = () => {
           <div className={classes.cardwrap}>
             {cardList.map((item, index) => (
               <div className={classes.card} key={index}>
+                <img src={item.img} alt="" />
                 <h4>{item.head}</h4>
                 <p>{item.description}</p>
               </div>
@@ -107,6 +134,39 @@ const AdvantageTwo = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <h1 className="main_heading">
+            <span>The Perfect</span>
+            <span>Franchise</span>
+          </h1>
+          <p>
+            The Perfect Franchise is the one book you need to read if you are
+            considering franchising.
+          </p>
+          <p>
+            Mark Schnurman is one of America’s top franchise consultants, and
+            the founder of Franchising Force. Mark outlines a clear process for
+            finding the perfect franchise.
+          </p>
+          <p>
+            In straightforward language, he explains how to: • decide whether
+            franchising is right for you; • determine which franchise will
+            optimize your chances of success; • conduct due diligence; • fund
+            your franchise investment; • live the life you dream about. If you
+            want to be your own boss, this is the book for you!
+          </p>
+
+          <ul>
+            {perfactFranchiselist.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <p>If you want to be your own boss, this is the book for you!</p>
+          <Btn />
         </div>
       </section>
     </>

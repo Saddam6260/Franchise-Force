@@ -16,9 +16,44 @@
 }
 
 .cardwrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     .card{
-        padding: 10px 30px;
+        width: 90%;
         text-align: center;
+
+        @include media($xxm) {
+            width: 70%;
+        }
+        @include media($sm) {
+            width: 45%;
+        }
+        @include media($lg) {
+            width: 30%;
+        }
+        @include media($xxl) {
+            width: 23%;
+        }
+
+        h4{
+            margin-bottom: 10px;
+        }
+
+        img{
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+
+            @include media($lg) {
+                width: 80px;
+                height: 80px;
+            }
+            @include media($xxl) {
+                width: 90px;
+                height: 90px;
+            }
+        }
     }
 }
 
