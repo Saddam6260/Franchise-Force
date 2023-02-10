@@ -19,6 +19,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-top: 30px;
+    column-gap: 40px;
+    row-gap: 43px;
     .card{
         width: 90%;
         text-align: center;
@@ -33,7 +36,7 @@
             width: 30%;
         }
         @include media($xxl) {
-            width: 23%;
+            width: 22%;
         }
 
         h4{

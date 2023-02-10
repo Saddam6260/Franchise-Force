@@ -11,6 +11,10 @@ import Betterdeallogo from "../../Images/Logo/betterdeallogo.png";
 import Partners from "../../Images/Logo/partners.png";
 import Transitionlogo from "../../Images/Logo/transitionlogo.png";
 
+import Discovery from "../../Images/Logo/Discovery.png";
+import Matching from "../../Images/Logo/Matching.png";
+import DueDiligence from "../../Images/Logo/Due-Diligence.png"
+
 const cardList = [
   {
     img: Personalsituationlogo,
@@ -60,17 +64,17 @@ const cardList = [
 
 const ourRoadmapList = [
   {
-    img: "Logo",
+    img: Discovery,
     head: "Discovery",
     pera: "We discuss your personal, professional and financial goals; your skillset and strengths - anything that is important in launching and running a business successfully.",
   },
   {
-    img: "Logo",
+    img: Matching,
     head: "Matching",
     pera: "We create a personal franchise business model for you and compare it to the leading franchises to identify a handful of brands that match your profile. We avoid fads, “hot brands” and businesses that are not Amazon-proof.",
   },
   {
-    img: "Logo",
+    img: DueDiligence,
     head: "Due-Diligence",
     pera: "When you learn about all the aspects of a franchise. We will speak regularly and I will provide insights, insider info, resources and tools to help you maximize the due diligence process.",
   },
@@ -128,9 +132,9 @@ const AdvantageTwo = () => {
           <div>
             {ourRoadmapList.map((item, index) => (
               <div className="card" key={index}>
-                <img src="" alt="" />
-                <h5>{item.head}</h5>
-                <p>{item.pera}</p>
+                <img src={item.img} alt="" />
+                <h5 className="small_heading">{item.head}</h5>
+                <p className="common_pera">{item.pera}</p>
               </div>
             ))}
           </div>
