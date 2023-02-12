@@ -62,11 +62,13 @@ const AdvantageOne = () => {
           <ul>
             {AdventageList.map((item, index) => (
               <li key={index}>
-                <FaCheck />
+                <span>
+                  <FaCheck />
+                </span>
                 <p>{item.text}</p>
               </li>
             ))}
-            <Btn text="VIEW MORE" btnClass={btnClass.lg_btn} />
+            <Btn text="VIEW MORE" btnClass={btnClass.lg_btn} className={classes.viewbtn}/>
           </ul>
         </div>
         <div className={classes.advantageright}>

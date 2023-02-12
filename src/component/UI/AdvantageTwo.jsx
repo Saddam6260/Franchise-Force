@@ -13,7 +13,9 @@ import Transitionlogo from "../../Images/Logo/transitionlogo.png";
 
 import Discovery from "../../Images/Logo/Discovery.png";
 import Matching from "../../Images/Logo/Matching.png";
-import DueDiligence from "../../Images/Logo/Due-Diligence.png"
+import DueDiligence from "../../Images/Logo/Due-Diligence.png";
+
+import Book from "../../Images/Background-image/Perfect_book.png";
 
 const cardList = [
   {
@@ -83,6 +85,7 @@ const ourRoadmapList = [
 // Perfact Franchise
 
 const perfactFranchiselist = [
+  "In straightforward language, he explains how to: ",  
   "decide whether franchising is right for you",
   "determine which franchise will optimize your chances of success",
   "conduct due diligence",
@@ -121,18 +124,20 @@ const AdvantageTwo = () => {
       </section>
 
       <section className={classes.our_roadmap}>
-        <div className="container">
-          <div>
+        <div className={`${classes.our_roadmap_container} container`}>
+          <div className={classes.roadmap_content}>
             <h1 className="main_heading">Our Roadmap</h1>
             <p className="gray_pera">
               The goal is to get to know you and your goals. Our team will
               provide you with guidance best fit to your lifestyle and future.
             </p>
           </div>
-          <div>
+          <div className={classes.roadmap_cardset}>
             {ourRoadmapList.map((item, index) => (
-              <div className="card" key={index}>
-                <img src={item.img} alt="" />
+              <div className={classes.card} key={index}>
+                <div className={classes.img_wrap}>
+                  <img src={item.img} alt="" />
+                </div>
                 <h5 className="small_heading">{item.head}</h5>
                 <p className="common_pera">{item.pera}</p>
               </div>
@@ -141,36 +146,34 @@ const AdvantageTwo = () => {
         </div>
       </section>
 
-      <section>
+      <section className={classes.perfact_franchise}>
         <div className="container">
-          <h1 className="main_heading">
-            <span>The Perfect</span>
-            <span>Franchise</span>
-          </h1>
-          <p>
-            The Perfect Franchise is the one book you need to read if you are
-            considering franchising.
-          </p>
-          <p>
-            Mark Schnurman is one of America’s top franchise consultants, and
-            the founder of Franchising Force. Mark outlines a clear process for
-            finding the perfect franchise.
-          </p>
-          <p>
-            In straightforward language, he explains how to: • decide whether
-            franchising is right for you; • determine which franchise will
-            optimize your chances of success; • conduct due diligence; • fund
-            your franchise investment; • live the life you dream about. If you
-            want to be your own boss, this is the book for you!
-          </p>
+          <div className={classes.perfact_franchise_content}>
+            <h1 className="main_heading">
+              <span>The Perfect</span>
+              <span>Franchise</span>
+            </h1>
+            <p className="gray_pera">
+              The Perfect Franchise is the one book you need to read if you are
+              considering franchising.
+            </p>
+            <p className="gray_pera">
+              Mark Schnurman is one of America’s top franchise consultants, and
+              the founder of Franchising Force. Mark outlines a clear process
+              for finding the perfect franchise.
+            </p>
 
-          <ul>
-            {perfactFranchiselist.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-          <p>If you want to be your own boss, this is the book for you!</p>
-          <Btn />
+            <ul>
+              {perfactFranchiselist.map((item) => (
+                <li className="gray_pera">{item}</li>
+              ))}
+            </ul>
+            <p>If you want to be your own boss, this is the book for you!</p>
+            <Btn />
+          </div>
+          <div className={classes.bookimgwrap}>
+            <img src={Book} alt="" />
+          </div>
         </div>
       </section>
     </>
