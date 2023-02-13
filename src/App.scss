@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
 }
-
+p{
+  line-height: 20px;
+}
+$darkgray: #556575;
 $darkblue: #053655;
 $orange: #ff6900;
 $gray: #a6a6a6;
@@ -108,5 +114,19 @@ $xxl: 1620px;
   }
   @include media($xl) {
     font-size: 16px;
+  }
+}
+
+h1{
+  line-height: 35px;
+
+  @include media($md) {
+    line-height: 40px;
+  }
+  @include media($lg) {
+    line-height: 50px;
+  }
+  @include media($xl){
+    line-height: 60px;
   }
 }

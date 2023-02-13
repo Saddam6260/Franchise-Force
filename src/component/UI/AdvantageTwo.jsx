@@ -1,4 +1,6 @@
 import React from "react";
+// icon
+import { BsArrowRight } from "react-icons/bs";
 
 import classes from "./AdvantageTwo.module.scss";
 import Btn from "./Btn";
@@ -16,6 +18,10 @@ import Matching from "../../Images/Logo/Matching.png";
 import DueDiligence from "../../Images/Logo/Due-Diligence.png";
 
 import Book from "../../Images/Background-image/Perfect_book.png";
+import AmazonLogo from "../../Images/Logo/amazonlogo.png";
+
+import Family_Financing from "../../Images/Background-image/LetsTalk-main-bg.png";
+import Franchisor_financing from "../../Images/Background-image/Home_main_bg.png";
 
 const cardList = [
   {
@@ -85,12 +91,34 @@ const ourRoadmapList = [
 // Perfact Franchise
 
 const perfactFranchiselist = [
-  "In straightforward language, he explains how to: ",  
+  "In straightforward language, he explains how to: ",
   "decide whether franchising is right for you",
   "determine which franchise will optimize your chances of success",
   "conduct due diligence",
   "fund your franchise investment",
   "live the life you dream about",
+];
+
+// Latest News
+
+const LatestNewsCard = [
+  {
+    img: Family_Financing,
+    date: "OCT.12.2019 ",
+    heading: "Friends and Family Financing",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    link: "Read more",
+  },
+
+  {
+    img: Franchisor_financing,
+    date: "OCT.12.2019 ",
+    heading: "Franchisor financing",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    link: "Read more",
+  },
 ];
 
 const AdvantageTwo = () => {
@@ -147,7 +175,7 @@ const AdvantageTwo = () => {
       </section>
 
       <section className={classes.perfact_franchise}>
-        <div className="container">
+        <div className={`container ${classes.perfact_franchise_wrap}`}>
           <div className={classes.perfact_franchise_content}>
             <h1 className="main_heading">
               <span>The Perfect</span>
@@ -168,14 +196,50 @@ const AdvantageTwo = () => {
                 <li className="gray_pera">{item}</li>
               ))}
             </ul>
-            <p>If you want to be your own boss, this is the book for you!</p>
-            <Btn />
+            <p className="common_pera">
+              If you want to be your own boss, this is the book for you!
+            </p>
+            <div className={classes.btn_wrap}>
+              <button className={classes.availablebtn}>
+                <a href="">AVAILABLE AT</a>
+              </button>
+              <button className={classes.amazonbtn}>
+                <img src={AmazonLogo} alt="" />
+              </button>
+            </div>
           </div>
           <div className={classes.bookimgwrap}>
             <img src={Book} alt="" />
           </div>
         </div>
       </section>
+
+      <section className={classes.latestnews}>
+        <div className={`container ${classes.latestnews_wrap}`}>
+          <div className={classes.heading_wrap}>
+            <h4 className="small_heading">FROM OUR BLOG</h4>
+            <h1 className="main_heading">Latest news and articles</h1>
+          </div>
+          <div className={classes.card_wrap}>
+            {LatestNewsCard.map((item, index) => (
+              <div key={index} className={classes.latestnews_card}>
+                <div className={classes.card_img}>
+                  <img src={item.img} alt="" />
+                </div>
+                <div className={classes.card_body}>
+                  <h4>{item.date}</h4>
+                  <h2>{item.heading}</h2>
+                  <p>{item.description}</p>
+                  <div className={classes.read_more}>
+                    <a href="">{item.link} <span><BsArrowRight/></span></a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </>
   );
 };
