@@ -1,0 +1,50 @@
+@import "../App.scss";
+
+// Footer
+
+footer{
+    padding: 20px 0px;
+    background-color: black;
+    
+    @include media($sm) {
+        padding: 20px 50px;
+    }
+    @include media($md) {
+        padding: 25px 50px;
+    }
+    @include media($xl) {
+        padding: 30px 50px;
+    }
+    .link_wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+
+        @include media($sm) {
+            justify-content: end;
+        }
+        a{
+            color: white;
+            font-size: 20px;
+
+            @include media($md) {
+                font-size: 25px;
+            }
+            @include media($xl) {
+                font-size: 30px;
+            }
+        }
+        span{
+            color: white;
+            font-size: 20px;
+
+            @include media($md) {
+                font-size: 25px;
+            }
+            @include media($xl) {
+                font-size: 30px;
+            }
+        }
+    }
+}

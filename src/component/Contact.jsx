@@ -8,14 +8,32 @@ const Contact = () => {
     <>
       <section>
         <div className="container">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p>©2022 Franchising Force. All rights reserved</p>
+            </div>
+            <ul>
+              <li>
+                <a href="">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="">Term Of Service</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <footer>
-        <div>
-          <a href="">NEXT PAGE <span><BsArrowRight/></span></a>
+        <div className={classes.link_wrap}>
+          <a href="">NEXT PAGE</a>
+          <span>
+            <BsArrowRight />
+          </span>
         </div>
       </footer>
     </>

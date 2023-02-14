@@ -25,6 +25,7 @@ const Home = () => {
       </main>
       <AdvantageOne/>
       <AdvantageTwo/>
+      <Contact/>
     </>
   );
 };
